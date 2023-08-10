@@ -71,29 +71,33 @@ h1,h2 {
     color: var(--green1);
 }
 /*TEXT ANIMATION*/
-.typing {
-    display: inline;
-}
-.typing span {
-    color: blue;
+.profile .typing {
+    display: inline-block;
+  }
+  
+.profile .typing span {
+    display: inline-block;
+    opacity: 1;
     overflow: hidden;
+    border-right:  10px solid orange; /* Uděláme efekt "píšícího" kurzoru */
     white-space: nowrap;
+    margin: 0;
+    letter-spacing: 10px;
+    animation: typing 5s steps(9) infinite 3s;
+    animation-delay: 3s;
+  }
+.typing span:nth-child(1) {
+    opacity: 1;
 }
-.typing span:nth-child(1){
-    width: 9ch;
-    animation: typing 5s steps(10) infinite 5s;
-    background-color: red;
-}
-.typing span:nth-child(2){
-    width: 9ch;
-    animation: typing 5s steps(10) infinite 10s;
-    background-color: red;
-}
-@keyframes typing {
+  
+  @keyframes typing {
     0% {
-        color: red;
+      width: 0;
+    }
+    50% {
+      width: 9ch;
     }
     100% {
-        color: blue;
+        width: 0;
     }
-}
+  }
