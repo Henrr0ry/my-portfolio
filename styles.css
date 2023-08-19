@@ -23,7 +23,7 @@ nav {
 nav div {
     float: right;
 }
-nav button {
+nav div button {
     width: 10rem;
     height: 2.5rem;
     background: var(--gray);
@@ -32,7 +32,7 @@ nav button {
     font-size: 1.5rem;
     color: var(--green1)
 }
-nav button:hover {
+nav div button:hover {
     background: var(--black);
 }
 canvas {
