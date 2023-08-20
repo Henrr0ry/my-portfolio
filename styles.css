@@ -35,9 +35,12 @@ nav div button {
 nav div button:hover {
     background: var(--black);
 }
-canvas {
+.matrixcode {
+    height: 100vh;
+    width: 10vw;
     display:block;
     background: black;
+    overflow: hidden;
 }
 .profile {
     position: absolute;
