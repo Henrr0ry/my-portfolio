@@ -1,0 +1,47 @@
+:root {
+    --black: #333;
+    --darkblack: black;
+    --gray: gray;
+}
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+.cmd {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0 var(--darkblack);
+    background: var(--black);
+}
+.cmd .panel {
+    width: 100%;
+    height: 1.5rem;
+    background: var(--gray);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+/*RESOLUTION*/
+@media (max-width:1400px) {
+    html {font-size: 18px;}
+}
+@media (max-width:1025px) {
+    html {font-size: 16px;} 
+    body{background: orange;} 
+}
+@media (max-width:801px) {
+    html {font-size: 14px;}
+    body{background: yellow;} 
+}
+@media (max-width:600px) {
+    html {font-size: 13px;}
+    body{background: green;}
+}
+@media (max-width:480px) {
+    html {font-size: 12px;}
+    body{background: blue;}
+}
+@media (max-width:320px) {
+    html {font-size: 10px;}
+    body{background: violet;}
+}
