@@ -2,6 +2,7 @@
     --black: #333;
     --darkblack: black;
     --gray: gray;
+    --darkgray: darkgray;
 }
 html {
     font-size: 20px;
@@ -19,6 +20,31 @@ html {
     height: 1.5rem;
     background: var(--gray);
     border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.cmd pre {
+    color: lime;
+    font-family: monospace;
+    font-size: 0.7rem;
+}
+.panel p {
+    margin: 0.2rem 0 0 0;
+    float: left;
+}
+.panel div {
+    height: 1.5rem;
+    float: left;
+}
+.panel .ctrl {
+    float: right;
+}
+.panel img {
+    padding: 0.2rem;
+    height: 1.2rem;
+    float: left;
+}
+.red {
+    background: red !important;
     border-top-right-radius: 0.5rem;
 }
 /*RESOLUTION*/
