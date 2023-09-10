@@ -8,6 +8,13 @@ html {
     font-size: 20px;
     scroll-behavior: smooth;
 }
+body {
+    margin: 0;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+}
 .cmd {
     width: 30rem;
     height: 20rem;
