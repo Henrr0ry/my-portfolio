@@ -1,59 +1,80 @@
 :root {
-    --black: #333;
-    --darkblack: black;
+    --lightblack: #403c38;
+    --black: #312d2a;
+    --darkblack: #211e1c;
     --gray: gray;
     --darkgray: darkgray;
+    --red: red;
+    --lime: lime;
 }
+
 html {
     font-size: 20px;
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
-}
-header {
-    width: 100vw;
-    height: 100vh;
-}
-.cmd {
-    width: 30rem;
-    height: 20rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 0 var(--darkblack);
+    width: 100%;
     background: var(--black);
 }
-.cmd .panel {
+
+/*      BANNER      */
+
+header {
     width: 100%;
-    height: 1.5rem;
-    background: var(--gray);
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    height: 100vh;
+    background: url(image/background.jpg);
+    background-size: cover;
+    background-position: center;
 }
-.cmd pre {
-    color: lime;
-    font-family: monospace;
-    font-size: 0.7rem;
+
+section {
+    background: var(--lightblack);
+    width: 30rem;
+    max-width: 95%;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 0 var(--darkblack);
 }
-.panel p {
-    margin: 0.2rem 0 0 0;
-    float: left;
+
+section:nth-child(odd) {
+    margin: 1rem auto 2rem 10%;
 }
-.panel div {
-    height: 1.5rem;
-    float: left;
+
+section:nth-child(even) {
+    margin: 1rem 10% 2rem auto;
 }
-.panel .ctrl {
-    float: right;
+/*      MAIN        */
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--red);
 }
-.panel img {
-    padding: 0.2rem;
-    height: 1.2rem;
-    float: left;
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--red);
 }
-.red {
-    background: red !important;
-    border-top-right-radius: 0.5rem;
+
+p {
+    font-size: 1rem;
+    color: var(--lime);
 }
+
+b {
+    color: var(--red);
+}
+
+/*      FOOTER      */
+footer {
+    width: 100%;
+    height: 5rem;
+    background: var(--darkblack);
+}
+/*      MATRIX      */
+
 /*RESOLUTION*/
 @media (max-width:1400px) {
     html {font-size: 18px;}
