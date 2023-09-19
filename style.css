@@ -37,6 +37,7 @@ section {
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 5px 0 var(--darkblack);
+    text-align: center;
 }
 
 section:nth-child(odd) {
