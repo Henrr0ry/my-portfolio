@@ -2,17 +2,15 @@
     --lightblack: #403c38;
     --black: #312d2a;
     --darkblack: #211e1c;
-    --gray: gray;
-    --darkgray: darkgray;
+    --gray: #737373;
+    --lightgray: #b3b3b3;
     --red: red;
     --lime: lime;
 }
-
 html {
     font-size: 20px;
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
     width: 100%;
@@ -20,7 +18,6 @@ body {
 }
 
 /*      BANNER      */
-
 header {
     width: 100%;
     height: 100vh;
@@ -28,46 +25,64 @@ header {
     background-size: cover;
     background-position: center;
 }
-
 section {
     background: var(--lightblack);
-    width: 30rem;
-    max-width: 95%;
+    width: 40rem;
+    max-width: 60%;
     height: fit-content;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 5px 0 var(--darkblack);
     text-align: center;
 }
-
 section:nth-child(odd) {
     margin: 1rem auto 2rem 10%;
 }
-
 section:nth-child(even) {
     margin: 1rem 10% 2rem auto;
 }
-/*      MAIN        */
 
+/*      MAIN        */
 h1 {
     font-size: 2.5rem;
     color: var(--red);
 }
-
 h2 {
     font-size: 1.5rem;
     color: var(--red);
 }
-
+h3 {
+    font-size: 1.2rem;
+    color: var(--red);
+}
 p {
     font-size: 1rem;
     color: var(--lime);
 }
-
 b {
     color: var(--red);
 }
-
+/*      SKILLS      */
+#skills article {
+    display: block;
+}
+div.skill-icon {
+    width: fit-content;
+    margin: 1rem;
+    padding: 0.5rem;
+    background: var(--gray);
+    border-radius: 1rem;
+    display: inline-block;
+}
+#skills div.content {
+    width: calc(100% - 9rem);
+    text-align: left;
+    display: inline-block;
+}
+.skill-icon img {
+    width: 5rem;
+    height: 5rem;
+}
 /*      FOOTER      */
 footer {
     width: 100%;
@@ -87,6 +102,7 @@ footer {
 @media (max-width:801px) {
     html {font-size: 14px;}
     body{background: yellow;} 
+    section:nth-child(odd), section:nth-child(even) {margin: 1rem auto 2rem auto}
 }
 @media (max-width:600px) {
     html {font-size: 13px;}
