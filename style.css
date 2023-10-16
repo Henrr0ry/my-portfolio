@@ -163,6 +163,7 @@ div.skill-icon {
 .progress-bar {
     width: 75%;
     height: 1rem;
+    background: var(--black);
     border: 0.10rem solid var(--lime);
     border-radius: 0.5rem;
     margin-left: 20%;
