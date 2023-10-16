@@ -159,6 +159,22 @@ div.skill-icon {
     width: 5rem;
     height: 5rem;
 }
+/*   PROGRESS BAR   */
+.progress-bar {
+    width: 75%;
+    height: 1rem;
+    border: 0.10rem solid var(--lime);
+    border-radius: 0.5rem;
+    margin-left: 20%;
+}
+.progress-level {
+    width: 9%;
+    height: 80%;
+    background: var(--lime);
+    border-radius: 0.25rem;
+    float: left;
+    margin: 0.10rem 0.5% auto 0.5%;
+}
 /*      FOOTER      */
 footer {
     width: 100%;
@@ -179,6 +195,7 @@ footer {
     html {font-size: 14px;}
     body{background: yellow;} 
     section:nth-child(odd), section:nth-child(even) {margin: 1rem auto 2rem auto}
+    .progress-bar { margin-left: 0; width: 100%;}
 }
 @media (max-width:600px) {
     html {font-size: 13px;}
