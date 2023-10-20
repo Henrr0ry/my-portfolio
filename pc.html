@@ -72,13 +72,13 @@
             left: calc(50% - 250px);
             perspective: 100000px;
             transform-style: preserve-3d;
-            transform: rotateX(30deg) rotateY(30deg);
+            transform: rotateX(0deg) rotateY(90deg);
         }
         .laptop-body, .laptop-monitor {
             transform-style: preserve-3d;
         }
         .laptop-monitor {
-            transform: translateY(-15px) rotateX(0deg) rotateY(0deg);
+            transform: translateY(180px) translateZ(70px) rotateX(0deg);
         }
         .laptop-body .part {
             position: absolute;
@@ -132,14 +132,14 @@
             height: 150px;
             background: rgba(255, 0, 0, 0.329);
             border: 2px solid black;
-            top: 10px;
+            top: 0;
             left: 0;
         }
         .laptop-monitor .front {
             height: 15px;
             width: 250px;
             left: 125px;
-            transform: translateZ(75px);
+            transform: translateZ(-145px) translateY(-20px);
         }
         .laptop-monitor .left {
             height: 15px;
@@ -148,25 +148,25 @@
         }
         .laptop-monitor .right {
             height: 15px;
-            transform: rotateY(90deg);
+            transform: rotateY(90deg) translateX(70px) translateY(-20px);
             left: 300px;
         }
         .laptop-monitor .back {
             height: 15px;
             width: 250px;
             left: 125px;
-            transform: translateZ(-75px);
+            transform: translateZ(5px) translateY(-20px);
         }
         .laptop-monitor .top {
             width: 250px;
-            transform: rotateX(90deg);
-            top: -65px;
+            transform: rotateX(90deg) translateY(-70px);
+            top: -95px;
             left: 125px;
         }
         .laptop-monitor .bottom {
             width: 250px;
-            transform: rotateX(90deg);
-            top: -50px;
+            transform: rotateX(90deg) translateY(-70px);
+            top: -80px;
             left: 125px;
         }
     </style>
