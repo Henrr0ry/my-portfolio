@@ -70,62 +70,124 @@
             width: 500px;
             top: calc(50% - 250px);
             left: calc(50% - 250px);
-            perspective: 1000px;
+            perspective: 100000px;
             transform-style: preserve-3d;
-            transform: rotateY(30deg);
-            --offset: (width + height) / 2 * 0.3;
+            transform: rotateX(30deg) rotateY(30deg);
         }
-        .body {
-
+        .laptop-body, .laptop-monitor {
+            transform-style: preserve-3d;
         }
-        .part {
+        .laptop-monitor {
+            transform: translateY(-15px) rotateX(0deg) rotateY(0deg);
+        }
+        .laptop-body .part {
             position: absolute;
             box-sizing: border-box;
-            width: 30%;
-            height: 30%;
+            width: 150px;
+            height: 150px;
             background: rgba(255, 0, 0, 0.329);
             border: 2px solid black;
-            top: 35%;
-            left: 35%;
+            top: 175px;
+            left: 175px;
         }
-        .front {
-            height: 5%;
+        .laptop-body .front {
+            height: 25px;
+            width: 250px;
+            left: 125px;
             transform: translateZ(75px);
         }
-        .left {
-            height: 5%;
+        .laptop-body .left {
+            height: 25px;
             transform: rotateY(90deg);
-            left: 20%;
+            left: 50px;
         }
-        .right {
-            height: 5%;
+        .laptop-body .right {
+            height: 25px;
             transform: rotateY(90deg);
-            left: 50%;
+            left: 300px;
         }
-        .back {
-            height: 5%;
+        .laptop-body .back {
+            height: 25px;
+            width: 250px;
+            left: 125px;
             transform: translateZ(-75px);
         }
-        .top {
+        .laptop-body .top {
+            width: 250px;
             transform: rotateX(90deg);
-            top: 20%;
+            top: 100px;
+            left: 125px;
         }
-        .bottom {
+        .laptop-body .bottom {
+            width: 250px;
             transform: rotateX(90deg);
-            top: 25%;
+            top: 125px;
+            left: 125px;
+        }
+        /*MONITOR*/
+        .laptop-monitor .part {
+            position: absolute;
+            box-sizing: border-box;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 0, 0, 0.329);
+            border: 2px solid black;
+            top: 10px;
+            left: 0;
+        }
+        .laptop-monitor .front {
+            height: 15px;
+            width: 250px;
+            left: 125px;
+            transform: translateZ(75px);
+        }
+        .laptop-monitor .left {
+            height: 15px;
+            transform: rotateY(90deg) translateX(70px) translateY(-20px);
+            left: 50px;
+        }
+        .laptop-monitor .right {
+            height: 15px;
+            transform: rotateY(90deg);
+            left: 300px;
+        }
+        .laptop-monitor .back {
+            height: 15px;
+            width: 250px;
+            left: 125px;
+            transform: translateZ(-75px);
+        }
+        .laptop-monitor .top {
+            width: 250px;
+            transform: rotateX(90deg);
+            top: -65px;
+            left: 125px;
+        }
+        .laptop-monitor .bottom {
+            width: 250px;
+            transform: rotateX(90deg);
+            top: -50px;
+            left: 125px;
         }
     </style>
     <body>
         <div class="pc-container">
             <div class="pc">
+                <div class="laptop-body">
                     <div class="part front"></div>
                     <div class="part back"></div>
                     <div class="part left"></div>
                     <div class="part right"></div>
                     <div class="part bottom"></div>
                     <div class="part top"></div>
-                <div class="monitor">
-
+                </div>
+                <div class="laptop-monitor">
+                    <div class="part front"></div>
+                    <div class="part back"></div>
+                    <div class="part left"></div>
+                    <div class="part right"></div>
+                    <div class="part bottom"></div>
+                    <div class="part top"></div>
                 </div>
             </div>
         </div>
