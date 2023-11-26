@@ -7,6 +7,10 @@
     --red: red;
     --lime: lime;
 }
+@font-face {
+    font-family: codefont;
+    src: url(fonts/CamingoCode-Regular.woff);
+}
 html {
     font-size: 20px;
     scroll-behavior: smooth;
@@ -47,7 +51,8 @@ header {
 .panel-bottom img {
     width: 3rem;
     height: 3rem;
-    padding: 1rem;
+    margin: 1rem;
+    border-radius: 50%;
 }
 /*    MAIN-TITLE    */
 .main-title {
@@ -55,7 +60,7 @@ header {
     height: 1ch;
     margin: 0;
     display: inline;
-    font-family: monospace;
+    font-family: codefont, monospace;
 }
 .main-title span {
     display: inline-flex;
@@ -127,6 +132,9 @@ div.cursor {
     }
 }
 /*      MAIN        */
+h1, h2, h3, p {
+    font-family: codefont, sans-serif;
+}
 h1 {
     font-size: 2.5rem;
     color: var(--red);
@@ -148,7 +156,7 @@ b {
 }
 /*      SKILLS      */
 #skills article {
-    display: block;
+    display: inline-flex;
 }
 div.skill-icon {
     width: fit-content;
@@ -160,29 +168,53 @@ div.skill-icon {
 }
 #skills div.content {
     width: calc(100% - 9rem);
-    text-align: left;
     display: inline-block;
 }
 .skill-icon img {
     width: 5rem;
     height: 5rem;
 }
-/*   PROGRESS BAR   */
-.progress-bar {
-    width: 75%;
-    height: 1rem;
-    background: var(--black);
-    border: 0.10rem solid var(--lime);
-    border-radius: 0.5rem;
-    margin-left: 20%;
+/*  MY CERTIFICATES */
+.slide-container {
+    width: 100%;
+    height: 20rem;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
-.progress-level {
-    width: 9%;
-    height: 80%;
-    background: var(--lime);
-    border-radius: 0.25rem;
-    float: left;
-    margin: 0.10rem 0.5% auto 0.5%;
+.slider, .viewer {
+    margin: 0;
+    padding: 0;
+}
+.slider {
+    height: 100%;
+    width: 5%;
+    background: var(--black);
+}
+.slider:hover {
+    background: var(--gray);
+}
+.slider.left {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.slider.right {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.slider img {
+    width: 100%;
+}
+.viewer {
+    height: 100%;
+    width: 80%;
+    background: var(--black);
+    overflow: hidden;
+    white-space: nowrap;
+}
+.viewer img {
+    height: auto;
+    width: 90%;
+    padding: 5%;
 }
 /*      FOOTER      */
 footer {
@@ -198,7 +230,7 @@ footer {
 }
 @media (max-width:1025px) {
     html {font-size: 16px;} 
-    body{background: orange;} 
+    body{background: orange;}
 }
 @media (max-width:801px) {
     html {font-size: 14px;}
