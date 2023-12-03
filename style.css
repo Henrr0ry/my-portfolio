@@ -20,7 +20,19 @@ body {
     width: 100%;
     background: var(--black);
 }
-
+/*      HEADER      */
+.profile {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 0.5rem solid black;
+    margin-left: 9rem;
+}
+.profile-div {
+    width: 33rem;
+    padding-top: 5rem;
+    padding-left: calc(50% - 16.5rem);  
+}
 /*      BANNER      */
 header {
     width: 100%;
@@ -244,6 +256,7 @@ footer p {
     html {font-size: 14px;}
     body{background: yellow;} 
     section:nth-child(odd), section:nth-child(even) {margin: 1rem auto 2rem auto !important; width: 95%; max-width: 100%;}
+    .profile-div { width: 100%;}
 }
 @media (max-width:600px) {
     html {font-size: 13px;}
