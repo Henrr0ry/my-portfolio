@@ -20,6 +20,58 @@ body {
     width: 100%;
     background: var(--black);
 }
+/*    NAVIGATION    */
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: transparent;
+}
+nav.active {
+    background: var(--darkblack);
+    position: fixed;
+    top: 0;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fadeInDown{
+    from{
+        transform: translateY(-600px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+  }
+  
+@-webkit-keyframes fadeInDown{
+    from{
+        transform: translateY(-600px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+  }
+nav div.right {
+    float: right;
+}
+nav button {
+    display: inline-block;
+    height: 2rem;
+    background: var(--black);
+    border: none;
+    border-radius: 0.5rem;
+    margin: 5px;
+    padding: 5px;
+}
+nav button img {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+nav button span {
+    color: white;
+    font-size: 1.2rem;
+}
 /*      HEADER      */
 .profile {
     width: 15rem;
@@ -63,7 +115,7 @@ header {
 .panel-bottom img {
     width: 3rem;
     height: 3rem;
-    margin: 1rem;
+    margin: 1rem 1rem 5rem 1rem;
     border-radius: 50%;
 }
 /*    MAIN-TITLE    */
@@ -201,6 +253,7 @@ div.skill-icon {
     height: 100%;
     width: 5%;
     background: var(--black);
+    transition-duration: 0.2s;
 }
 .slider:hover {
     background: var(--gray);

@@ -4,8 +4,18 @@
         <title>Jan Žňava Portfolio</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
     </head>
     <body>
+        <nav id="nav">
+            <div class="right">
+                <button><img src="image/about.png"><span>About</span></button>
+                <button><img src="image/projects.png"><span>Projects</span></button>
+                <button><img src="image/skills.png"><span>Skills</span></button>
+                <button><img src="image/certificate.png"><span>Certificates</span></button>
+                <button><img src="image/contact.png"><span>Contacts</span></button>
+            </div>
+        </nav>
         <header>
             <div class="profile-div">
                 <img src="image/profile2.gif" class="profile"> <br>
@@ -24,22 +34,25 @@
             </section>
             <section id="skills" class="panel-section">
                 <h2>My Skills</h2>
+                <h3>Front-end development</h3>
                 <article><div class="skill-icon"><img src="image/html-5.png"></div></article>
                 <article><div class="skill-icon"><img src="image/css-3.png"></div></article>
                 <article><div class="skill-icon"><img src="image/js.png"></div></article>
+                <h3>Back-end development</h3>
                 <article><div class="skill-icon"><img src="image/php.png"></div></article>
+                <h3>Windows desktop development</h3>
                 <article><div class="skill-icon"><img src="image/c-sharp.png"></div></article>
             </section>
             <section id="certificates" class="panel-section">
                 <h2>My Certificates</h2>
                 <table class="slide-container">
                     <tr>
-                        <td class="slider left"><img src="image/left-arrow.png"></td>
-                        <td class="viewer">
+                        <td class="slider left" onclick="leftSlide()"><img src="image/left-arrow.png"></td>
+                        <td id="viewer" class="viewer">
                             <img src="certificates/certification-00.png">
                             <img src="certificates/certification-01.png">
                         </td>
-                        <td class="slider right"><img src="image/right-arrow.png"></td>
+                        <td class="slider right" onclick="rigthSlide()"><img src="image/right-arrow.png"></td>
                     </tr>
                 </table>
             </section>
@@ -50,12 +63,6 @@
                 <img src="image/linkedin.png" alt="">
                 <img src="image/fiverr.png" alt="">
             </section>
-          <!--remove below-->
-            <img src="pictures/txt.png">
-            <img src="pictures/exe.png">
-            <img src="pictures/dat-file.png">
-            <img src="pictures/xml-extension.png">
-            <img src="pictures/ssl.png">
         </main>
         <footer>
             <p>Site by Jan Žňava</p>
