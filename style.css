@@ -218,6 +218,10 @@ p {
 b {
     color: var(--red);
 }
+/*      ABOUT       */
+#about p{
+    text-align: justify;
+}
 /*      SKILLS      */
 #skills article {
     display: inline-flex;
@@ -226,17 +230,24 @@ div.skill-icon {
     width: fit-content;
     margin: 1rem;
     padding: 0.5rem;
-    background: var(--gray);
+    background: var(--lightblack);
     border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px black;
     display: inline-block;
+    transition: 0.5s ease-in-out;
+}
+div.skill-icon:hover {
+    background: var(--black);
+    box-shadow: 4px 4px 10px black;
 }
 #skills div.content {
     width: calc(100% - 9rem);
     display: inline-block;
 }
 .skill-icon img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 }
 /*  MY CERTIFICATES */
 .slide-container {
