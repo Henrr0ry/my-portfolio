@@ -25,7 +25,7 @@
             </div>
         </header>
         <main>
-            <section id="about" class="panel-section">
+            <section id="about" class="panel-section left">
                 <h2>About me</h2>
                 <p>My name is Honza Žňava and my online nickname is Henrr0ry.<br>
                    I am a programmer in many fields of computing. I first try a create a web and then
@@ -34,12 +34,30 @@
                    Now I think i want to become a desktop developer.
                 </p>
             </section>
-            <section id="projects" class="panel-section">
+            <div class="laptop-div">
+                <iframe src="pc.html" frameborder="0" height="350" width="400"></iframe>
+            </div> <br>
+            <section id="projects">
                 <h2>Moje Projekty</h2>
-                <!--<iframe frameborder="0" src="https://itch.io/embed/2068113?bg_color=ffffff&amp;fg_color=000000&amp;link_color=49BFFF&amp;border_color=bebebe" width="552" height="167"><a href="https://henrr0ry.itch.io/markdown-notepad">Markdown Notepad by Henrr0ry</a></iframe>
-                <iframe frameborder="0" src="https://itch.io/embed/1667744?bg_color=000000&amp;fg_color=07f013&amp;link_color=7dff67&amp;border_color=333333" width="552" height="167"><a href="https://henrr0ry.itch.io/fake-malware">Fake Malware - Troll Tool (Prank your friends) by Henrr0ry</a></iframe>-->
+                <div class="item-container">
+                    <div class="project">
+                        <img src="" alt="">
+                        <h3>Project</h3>
+                        <p>something</p>
+                    </div>
+                    <div class="project">
+                        <img src="" alt="">
+                        <h3>Project</h3>
+                        <p>something</p>
+                    </div>
+                    <div class="project">
+                        <img src="" alt="">
+                        <h3>Project</h3>
+                        <p>something</p>
+                    </div>
+                </div>
             </section>
-            <section id="skills" class="panel-section">
+            <section id="skills">
                 <h2>My Skills</h2>
                 <article><div class="skill-icon"><img src="image/html-5.png"></div></article>
                 <article><div class="skill-icon"><img src="image/css-3.png"></div></article>
@@ -47,16 +65,18 @@
                 <article><div class="skill-icon"><img src="image/php.png"></div></article>
                 <article><div class="skill-icon"><img src="image/c-sharp.png"></div></article>
             </section>
-            <section id="certificates" class="panel-section">
-                <h2>My Certificates</h2>
+            <section id="certificates">
                 <table class="slide-container">
                     <tr>
-                        <td class="slider left" onclick="leftSlide()"><img src="image/left-arrow.png"></td>
+                        <td class="slider left" onclick="leftSlide()" rowspan="2"><img src="image/left-arrow.png"></td>
+                        <th>My Certificates</th>
+                        <td class="slider right" onclick="rigthSlide()" rowspan="2"><img src="image/right-arrow.png"></td>
+                    </tr>
+                    <tr>
                         <td id="viewer" class="viewer">
                             <img src="certificates/certification-00.png">
                             <img src="certificates/certification-01.png">
                         </td>
-                        <td class="slider right" onclick="rigthSlide()"><img src="image/right-arrow.png"></td>
                     </tr>
                 </table>
             </section>
