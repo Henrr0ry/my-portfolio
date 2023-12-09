@@ -299,27 +299,27 @@ footer p {
 
 /*RESOLUTION*/
 @media (max-width:1400px) {
-    html {font-size: 18px;}
+    html {font-size: 20px;}
 }
 @media (max-width:1025px) {
-    html {font-size: 16px;} 
+    html {font-size: 19px;} 
     body{background: orange;}
 }
 @media (max-width:801px) {
-    html {font-size: 14px;}
+    html {font-size: 18px;}
     body{background: yellow;} 
     section:nth-child(odd), section:nth-child(even) {margin: 1rem auto 2rem auto !important; width: 95%; max-width: 100%;}
     .profile-div { width: 100%;}
 }
 @media (max-width:600px) {
-    html {font-size: 13px;}
+    html {font-size: 17px;}
     body{background: green;}
 }
 @media (max-width:480px) {
-    html {font-size: 12px;}
+    html {font-size: 16px;}
     body{background: blue;}
 }
 @media (max-width:320px) {
-    html {font-size: 10px;}
+    html {font-size: 15px;}
     body{background: violet;}
 }
