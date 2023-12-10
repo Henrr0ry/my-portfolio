@@ -150,7 +150,7 @@
         }
     }
 </style>
-<div class="pc-container">
+<div class="pc-container" onclick="BSODshow()">
     <div class="pc">
         <div class="laptop-body">
             <div class="part front"></div>
@@ -165,8 +165,13 @@
             <div class="part back"></div>
             <div class="part left"></div>
             <div class="part right"></div>
-            <div class="part bottom"><img src="image/monitor.gif" style="transform: scaleX(-1);"></div>
+            <div class="part bottom"><img id="monitor" src="image/monitor.gif" style="transform: scaleX(-1);"></div>
             <div class="part top"><img src="image/monitor-back.png"></div>
         </div>
     </div>
 </div>
+<script>
+    function BSODshow() {
+        document.getElementById("monitor").src = "image/monitor.png";
+    }
+</script>
