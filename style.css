@@ -356,7 +356,7 @@ th {
 .slider img {
     width: 100%;
 }
-.viewer {
+.viewer {   
     height: 100%;
     width: 80%;
     background: var(--lightblack);
@@ -375,8 +375,15 @@ th {
 .panel-bottom img {
     width: 3rem;
     height: 3rem;
-    margin: 2rem 1rem 5rem 1rem;
     border-radius: 50%;
+}
+.contact-div {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 2rem 1rem 5rem 1rem;
+    overflow: hidden;
+    display: inline-block;
 }
 footer {
     width: 100%;
