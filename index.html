@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="cz">
     <head>
-        <title>Jan Žňava Portfolio</title>
+        <title>Henrr0ry Portfolio</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v=2">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <script src="main.js"></script>
+        <meta name="description" content="Henrr0ry's Programmer portfolio website">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Henrr0ry, Programmer, Portfolio">
+        <meta name="author" content="Henrr0ry">
     </head>
     <body>
+        <button id="menu" onclick="nav_update()"><img src="image/menu.svg"></button>
         <nav id="nav">
-            <img src="image/terminal.png" alt="icon">
             <div class="right">
-                <button><img src="image/about.png"><span>About</span></button>
-                <button><img src="image/projects.png"><span>Projects</span></button>
-                <button><img src="image/skills.png"><span>Skills</span></button>
-                <button><img src="image/certificate.png"><span>Certificates</span></button>
-                <button><img src="image/contact.png"><span>Contacts</span></button>
+                <a href="#about"><button><img src="image/about.png"><span>About</span></button></a>
+                <a href="#projects"><button><img src="image/projects.png"><span>Projects</span></button></a>
+                <a href="#skills"><button><img src="image/skills.png"><span>Skills</span></button></a>
+                <a href="#certificate"><button><img src="image/certificate.png"><span>Certificates</span></button></a>
+                <a href="#contact"><button><img src="image/contact.png"><span>Contacts</span></button></a>
             </div>
         </nav>
         <header>
+            <div id="header-shadow" class="header-shadow"></div>
             <div class="profile-div">
                 <img src="image/profile2.gif" class="profile"> <br>
-                <h1 class="main-title"><span>Ahoj, já jsem</span> <span>Jan&nbsp;Žňava</span><span>Henrr0ry</span><div class="cursor"></div></h1>
+                <h1 class="main-title"><span>Hi, I am</span> <span>Jan&nbsp;Žňava</span><span>Henrr0ry</span><div class="cursor"></div></h1>
             </div>
         </header>
         <main>
@@ -30,11 +34,11 @@
                 <div class="in-section">
                     <div class="padding">
                         <h2>About me</h2>
-                        <p>My name is Honza Žňava and my online nickname is Henrr0ry.<br>
-                        I am a programmer in many fields of computing. I first try a create a web and then
-                        started a develop easy games in C#.<br>Then i tried a unity engine, but i crossed to
-                        godot engine. I am trying to improve in web development like php, mysql database, and more.<br>
-                        Now I think i want to become a desktop developer.
+                        <p>
+                        I am 17 years old Student Programmer.<br>I first try a create a website and then
+                        started a develop easy games in C#. Then i tried a unity engine, but i crossed to
+                        godot engine. I want to create something amazing.<br> I can do web development
+                        (front-end, back-end), and create games in godot engine.
                         </p>
                     </div>
                 </div>
@@ -98,14 +102,14 @@
             </section>
             <section id="contact" class="panel-bottom">
                 <div class="contact-div"><a href="https://honzazna.infinityfreeapp.com" target="_blank"><img src="image/web.png" alt="web"></a></div>
-                <div class="contact-div"><img src="image/github.png" alt=""></div>
+                <div class="contact-div"><a href="https://github.com/Henrr0ry/" target="_blank"><img src="image/github.png" alt="github"></a></div>
                 <div class="contact-div"><a href="https://henrr0ry.itch.io" target="_blank"><img src="image/itchio.png" alt="itch.io"></a></div>
-                <div class="contact-div"><img src="image/linkedin.png" alt=""></div>
-                <div class="contact-div"><img src="image/fiverr.png" alt=""></div>
+                <div class="contact-div"><a href="https://www.linkedin.com/in/jan-%C5%BE%C5%88ava-84a563286/" target="_blank"><img src="image/linkedin.png" alt="linked in"></a></div>
+                <div class="contact-div"><a href="https://www.fiverr.com/honzazna" target="_blank"><img src="image/fiverr.png" alt="fiverr"></a></div>
             </section>
         </main>
         <footer>
-            <p>Site by Jan Žňava</p>
+            <p>2024 © Henrr0ry</p>
         </footer>
     </body>
 </html>
