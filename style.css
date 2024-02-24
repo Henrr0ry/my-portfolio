@@ -167,6 +167,7 @@ header {
     background: url(image/background.png);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .header-shadow {
     position: absolute;
@@ -527,4 +528,12 @@ footer p {
 }
 @media (max-width:320px) {
     html {font-size: 11px;}
+}
+
+/*      MATRIX      */
+#matrix {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block
 }
