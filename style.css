@@ -5,7 +5,8 @@
     --gray: #737373;
     --lightgray: #b3b3b3;
     --red: red;
-    --lime: lime;
+    --lime: #00cc00;
+    --light-lime: #9dff9a;
     --green: green;
     --darkblue: rgb(0, 0, 109);
     --blue: rgb(43, 43, 194);
@@ -14,6 +15,10 @@
 @font-face {
     font-family: codefont;
     src: url(fonts/CamingoCode-Regular.woff);
+}
+@font-face {
+    font-family: dosfont;
+    src: url(fonts/ModernDOS9x16.ttf);
 }
 html {
     box-sizing: border-box;
@@ -164,7 +169,7 @@ nav.sidebar button {
 header {
     width: 100%;
     height: 100vh;
-    background: url(image/background.png);
+    /*background: url(image/background.png);*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -188,6 +193,52 @@ header {
         background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
     }
     
+}
+/*      MATRIX      */
+#matrix {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--lime);
+    text-shadow: 0 0 5px var(--light-lime);
+    font-family: dosfont;
+    font-size: 1.5rem;
+}
+.m-div {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    min-width: 1.5rem;
+    max-width: 1.5rem;
+    background: black;
+    animation: code_fall 400ms infinite;
+}
+.m-ligth {
+    color: var(--light-lime);
+    text-shadow: 0 0 5px #e4ffe3;
+}
+.m-norml, .m-ligth {
+    text-decoration: none;
+    display: inline-block;
+}
+@keyframes code_fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(1.5rem);
+    }
 }
 /*    MAIN-TITLE    */
 .main-title {
@@ -269,6 +320,10 @@ div.cursor {
     }
 }
 /*      MAIN        */
+main {
+    background: var(--black);
+    padding-bottom: 10rem;
+}
 h1, h2, h3, p {
     font-family: codefont, sans-serif;
 }
@@ -493,7 +548,6 @@ footer {
     height: 5rem;
     background: var(--darkblack);
     position: relative;
-    margin-top: 6rem;
     padding-bottom: 6rem;
 }
 footer p {
@@ -503,9 +557,7 @@ footer p {
     bottom: 1rem;
     right: 1rem;
 }
-/*      MATRIX      */
-
-/*RESOLUTION*/
+/*      RESOLUTION      */
 @media (max-width:1400px) {
     html {font-size: 20px;}
 }
@@ -528,12 +580,4 @@ footer p {
 }
 @media (max-width:320px) {
     html {font-size: 11px;}
-}
-
-/*      MATRIX      */
-#matrix {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: block
 }
