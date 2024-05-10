@@ -1,0 +1,121 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Henrr0ry Portfolio</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css?v=14">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="main.js"></script>
+        <meta name="description" content="Henrr0ry's Programmer portfolio website">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Henrr0ry, Programmer, Portfolio, henry005cz, Jan Žňava">
+        <meta name="author" content="Henrr0ry">
+    </head>
+    <body>
+        <button id="menu" onclick="nav_update()"><img src="image/menu.svg"></button>
+        <nav id="nav">
+            <div class="right">
+                <a href="#about"><button><img src="image/about.png"><span>About</span></button></a>
+                <a href="#projects"><button><img src="image/projects.png"><span>Projects</span></button></a>
+                <a href="#skills"><button><img src="image/skills.png"><span>Skills</span></button></a>
+                <a href="#certificate"><button><img src="image/certificate.png"><span>Certificates</span></button></a>
+                <a href="#contact"><button><img src="image/contact.png"><span>Contacts</span></button></a>
+            </div>
+        </nav>
+        <header>
+            <div id="header-shadow" class="header-shadow"></div>
+            <div id="matrix"></div>
+            <script src="matrix.js?v=107"></script>
+            <div class="profile-div">
+                <img src="image/profile2.gif" class="profile"> <br>
+                <h1 class="main-title"><span>Hi, I am</span> <span>Jan&nbsp;Žňava</span><span>Henrr0ry</span><div class="cursor"></div></h1>
+            </div>
+        </header>
+        <main>
+            <section id="about" class="panel-section left">
+                <div class="in-section">
+                    <div class="padding">
+                        <h2>About me</h2>
+                        <p>
+                        I am 17 years old Student Programmer.<br>I first try a create a website and then
+                        started a develop easy games in C#. Then i tried a unity engine, but i crossed to
+                        godot engine. I want to create something amazing.<br> I can do web development
+                        (front-end, back-end), and create games in godot engine.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div class="laptop-div">
+                <iframe src="pc.html" frameborder="0" height="350" width="400"></iframe>
+            </div> <br>
+            <section id="projects">
+                <h2>My Projects</h2>
+                <div class="item-container">
+                    <div class="project">
+                        <div class="in-section">
+                            <img class="project-img" src="image/fakemalware.png" alt="icon">
+                            <h3>Fake Malware</h3>
+                            <p>This is troll tool to prank your friend.</p>
+                            <a href="https://henrr0ry.itch.io/fake-malware" target="_blank"><button class="visit-btn"><img src="image/external-link.png">Visit</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="in-section">
+                            <img class="project-img" src="image/mdnotepad.png" alt="icon">
+                            <h3>Markdown Notepad</h3>
+                            <p>Easy Editor and Viewer markdown source files. Easy to use.</p>
+                            <a href="https://henrr0ry.itch.io/markdown-notepad" target="_blank"><button class="visit-btn"><img src="image/external-link.png">Visit</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="in-section">
+                            <img class="project-img" src="image/UD2.png" alt="icon">
+                            <h3>Underground Dungeon II</h3>
+                            <p>This is remake my old game. It's classic dungeon topdown rpg.</p>
+                            <a href="https://henrr0ry.itch.io/underground-dungeon-ii" target="_blank"><button class="visit-btn"><img src="image/external-link.png">Visit</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>My Skills</h2>
+                <article><div class="skill-icon" title="html5"><img src="image/html-5.png"></div></article>
+                <article><div class="skill-icon" title="css3"><img src="image/css-3.png"></div></article>
+                <article><div class="skill-icon" title="javascript"><img src="image/js.png"></div></article>
+                <article><div class="skill-icon" title="php"><img src="image/php.png"></div></article>
+                <article><div class="skill-icon" title="c#"><img src="image/c-sharp.png"></div></article>
+            </section>
+            <section id="certificates">
+                <div class="shadow-div">
+                    <table class="slide-container">
+                        <tr>
+                            <td class="slider left" onclick="leftSlide()" rowspan="2"><img src="image/left-arrow.png"></td>
+                            <th>My Certificates</th>
+                            <td class="slider right" onclick="rigthSlide()" rowspan="2"><img src="image/right-arrow.png"></td>
+                        </tr>
+                        <tr>
+                            <td id="viewer" class="viewer">
+                                <img src="certificates/certification-00.png">
+                                <img src="certificates/certification-01.png">
+                                <img src="certificates/certification-02.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section id="contact" class="panel-bottom">
+                <div class="contact-div"><a href="https://honzazna.infinityfreeapp.com" target="_blank"><img src="image/web.png" alt="web"></a></div>
+                <div class="contact-div"><a href="https://github.com/Henrr0ry/" target="_blank"><img src="image/github.png" alt="github"></a></div>
+                <div class="contact-div"><a href="https://henrr0ry.itch.io" target="_blank"><img src="image/itchio.png" alt="itch.io"></a></div>
+                <div class="contact-div"><a href="https://www.linkedin.com/in/jan-%C5%BE%C5%88ava-84a563286/" target="_blank"><img src="image/linkedin.png" alt="linked in"></a></div>
+                <div class="contact-div"><a href="https://www.fiverr.com/honzazna" target="_blank"><img src="image/fiverr.png" alt="fiverr"></a></div>
+            </section>
+            <p>2024 © Henrr0ry</p>
+        </footer>
+    </body>
+</html>
+=======
+>>>>>>> main

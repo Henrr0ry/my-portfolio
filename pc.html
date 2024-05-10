@@ -1,0 +1,187 @@
+<style>
+    body {
+        margin: 0;
+    }
+    .pc-container {
+        position:absolute;
+        width: 400px;
+        height: 350px;
+        overflow: hidden;
+        /*background: radial-gradient(rgb(56, 122, 197) 0%, rgb(26, 66, 175) 100% );*/
+    }
+    .pc {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        top: 30;
+        left: -50;
+        perspective: 100000px;
+        transform-style: preserve-3d;
+        transform: rotateX(345deg) rotateY(150deg);
+        animation: 3s showLaptop1 ease-in-out, 20s 5s rotationLaptop linear infinite;
+    }
+    .laptop-body, .laptop-monitor {
+        transform-style: preserve-3d;
+    }
+    .laptop-monitor {
+        transform: translateY(180px) translateZ(70px) rotateX(250deg);
+        animation: 3s showLaptop2 ease-in-out;
+    }
+    .part {
+        background: radial-gradient(#8c8c8c, #8c8c8c, #6b6b6b,#3d3d3d);
+    }
+    .laptop-body .part {
+        position: absolute;
+        box-sizing: border-box;
+        width: 150px;
+        height: 150px;
+        top: 175px;
+        left: 175px;
+    }
+    .laptop-body .front {
+        height: 15px;
+        width: 250px;
+        left: 125px;
+        transform: translateZ(75px);
+    }
+    .laptop-body .left {
+        height: 15px;
+        transform: rotateY(90deg);
+        left: 50px;
+    }
+    .laptop-body .right {
+        height: 15px;
+        transform: rotateY(90deg);
+        left: 300px;
+    }
+    .laptop-body .back {
+        height: 15px;
+        width: 250px;
+        left: 125px;
+        transform: translateZ(-75px);
+    }
+    .laptop-body .top {
+        width: 250px;
+        transform: rotateX(90deg);
+        top: 100px;
+        left: 125px;
+    }
+    .laptop-body .bottom {
+        width: 250px;
+        transform: rotateX(90deg);
+        top: 115px;
+        left: 125px;
+        box-shadow: 0px 0px 50px black;
+    }
+    /*MONITOR*/
+    .laptop-monitor .part {
+        position: absolute;
+        box-sizing: border-box;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 0;
+    }
+    .laptop-monitor .front {
+        height: 10px;
+        width: 250px;
+        left: 125px;
+        transform: translateZ(-145px) translateY(-15px);
+    }
+    .laptop-monitor .left {
+        height: 10px;
+        transform: rotateY(90deg) translateX(70px) translateY(-15px);
+        left: 50px;
+    }
+    .laptop-monitor .right {
+        height: 10px;
+        transform: rotateY(90deg) translateX(70px) translateY(-15px);
+        left: 300px;
+    }
+    .laptop-monitor .back {
+        height: 10px;
+        width: 250px;
+        left: 125px;
+        transform: translateZ(5px) translateY(-15px);
+    }
+    .laptop-monitor .top {
+        width: 250px;
+        transform: rotateX(90deg) translateY(-70px);
+        top: -90px;
+        left: 125px;
+    }
+    .laptop-monitor .bottom {
+        width: 250px;
+        transform: rotateX(90deg) translateY(-70px);
+        top: -80px;
+        left: 125px;
+    }
+    .display {
+        width: 236px;
+        height: 125px;
+        margin: 7px 0 0 5px;
+        border: 2px solid #6b6b6b;
+        background-color: aqua;
+        background-size: cover;
+        background-position: center;
+        transform: scaleY(1) scaleX(-1);
+    }
+    @keyframes showLaptop1 {
+        0% {
+            transform: rotateX(359deg) rotateY(180deg);
+        }
+        100% {
+            transform: rotateX(345deg) rotateY(150deg);
+        }
+    }
+    @keyframes showLaptop2 {
+        0% {
+            transform: translateY(180px) translateZ(70px) rotateX(359deg);
+        }
+        100% {
+            transform: translateY(180px) translateZ(70px) rotateX(250deg);
+        }
+    }
+    @keyframes rotationLaptop {
+        0% {
+            transform: rotateX(345deg) rotateY(150deg);
+        }
+        25% {
+            transform: rotateX(345deg) rotateY(60deg);
+        }
+        50% {
+            transform: rotateX(345deg) rotateY(-30deg);
+        }
+        75% {
+            transform: rotateX(345deg) rotateY(-120deg);
+        }
+        100% {
+            transform: rotateX(345deg) rotateY(-210deg);
+        }
+    }
+</style>
+<div class="pc-container" onclick="BSODshow()">
+    <div class="pc">
+        <div class="laptop-body">
+            <div class="part front"></div>
+            <div class="part back"></div>
+            <div class="part left"></div>
+            <div class="part right"></div>
+            <div class="part bottom"></div>
+            <div class="part top"> <img src="image/keyboard.png" style="transform: scaleY(-1) scaleX(-1);"></div>
+        </div>
+        <div class="laptop-monitor">
+            <div class="part front"></div>
+            <div class="part back"></div>
+            <div class="part left"></div>
+            <div class="part right"></div>
+            <div class="part bottom"><img class="display" id="monitor" src="image/monitor.gif"></div>
+            <div class="part top"><img src="image/monitor-back.png"></div>
+        </div>
+    </div>
+</div>
+<script>
+    function BSODshow() {
+        document.getElementById("monitor").src = "image/monitor.png";
+    }
+</script>
