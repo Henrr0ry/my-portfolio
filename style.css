@@ -179,7 +179,7 @@ header {
     width: 100%;
     height: 100%;
     background: transparent;
-    background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
+    background: linear-gradient(transparent 0%, transparent 60%, black 95%, black 100%);
 }
 .header-shadow.active {
     background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
@@ -209,7 +209,7 @@ header {
     justify-content: center;
     background-color: black;
     color: var(--lime);
-    text-shadow: 0 0 5px var(--light-lime);
+    text-shadow: 0 0 10px var(--light-lime);
     font-family: dosfont;
     font-size: 1.5rem;
 }
@@ -226,7 +226,7 @@ header {
 }
 .m-ligth {
     color: var(--light-lime);
-    text-shadow: 0 0 5px #e4ffe3;
+    text-shadow: 0 0 10px #e4ffe3;
 }
 .m-norml, .m-ligth {
     text-decoration: none;
@@ -322,6 +322,7 @@ div.cursor {
 /*      MAIN        */
 main {
     background: var(--black);
+    padding-top: 10%;
     padding-bottom: 10rem;
 }
 h1, h2, h3, p {
