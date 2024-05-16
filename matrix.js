@@ -13,7 +13,7 @@ function start() {
   let newCode = code;
   let size = parseInt(window.getComputedStyle(matrix).fontSize);
   let columns = Math.floor(window.innerWidth / size);
-  let rows = Math.floor(window.innerHeight / size) -2;
+  let rows = Math.floor(window.innerHeight / size) -3;
 
   for (let i = 0; i < columns; i++) {
     newCode[i] = "";

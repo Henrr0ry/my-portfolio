@@ -63,12 +63,12 @@ nav.active {
     }
   }
 nav div.right {
-    float: right;
+    float: left;
 }
 nav button {
     display: inline-block;
     height: 2rem;
-    width: 8.5rem;
+    width: 9.5rem;
     background: var(--black);
     border: none;
     border-radius: 0.5rem;
@@ -441,9 +441,6 @@ b {
 /*      SKILLS      */
 #skills, #projects {
     text-align: center;
-}
-#skills article {
-    display: inline-flex;
 }
 div.skill-icon {
     width: fit-content;
