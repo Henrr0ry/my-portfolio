@@ -128,6 +128,12 @@ nav.sidebar.show {
 nav.sidebar button {
     display: block;
 }
+.mini-profile {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: 6px;
+}
 /*      MENU BTN    */
 #menu {
     z-index: 6;
@@ -440,6 +446,25 @@ b {
     height: 1rem;
     width: 1rem;
 }
+/*      LARGE BTN     */
+.large {
+    /*width: 20rem;*/
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin: 10px;
+}
+span {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.7rem 10px 10px 10px;
+    float: right;
+}
+.large img {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
 /*      SKILLS      */
 #skills, #projects {
     text-align: center;
@@ -467,64 +492,8 @@ div.skill-icon:hover {
     height: 4rem;
 }
 /*  MY CERTIFICATES */
-th {
-    color: var(--red);
-    background: var(--lightblack);
-    font-size: 1.5rem;
-    font-family: codefont;
-}
-.slide-container {
-    width: 40rem;
-    height: 20rem;
-    border-collapse: collapse;
-    table-layout: fixed;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 0 var(--darkblack);
-}
-.slider, .viewer {
-    margin: 0;
-    padding: 0;
-}
-.slider {
-    height: 100%;
-    width: 5%;
-    background: var(--lightblack);
-    transition-duration: 0.2s;
-}
-.slider:hover {
-    background: var(--gray);
-}
-.slider.left {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-}
-.slider.right {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-.slider img {
-    width: 100%;
-}
-.viewer {   
-    height: 100%;
-    width: 80%;
-    background: var(--lightblack);
-    overflow: hidden;
-    white-space: nowrap;
-}
-.viewer img {
-    height: auto;
-    width: 90%;
-    padding: 5%;
-}
-.shadow-div {
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px black;
-    width: fit-content;
-    height: fit-content;
-    /*max-width: 60%;*/
-    margin: 1rem auto 1rem auto;
+#certificates {
+    text-align: center;
 }
 /*      FOOTER      */
 .panel-bottom {
