@@ -5,8 +5,7 @@
     --gray: #737373;
     --lightgray: #b3b3b3;
     --red: red;
-    --lime: #00cc00;
-    --light-lime: #9dff9a;
+    --lime: lime;
     --green: green;
     --darkblue: rgb(0, 0, 109);
     --blue: rgb(43, 43, 194);
@@ -32,9 +31,11 @@ body {
 }
 /*    NAVIGATION    */
 nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
     background: transparent;
     z-index: 5;
-    float: right;
 }
 nav.active {
     background: var(--darkblack);
@@ -60,10 +61,13 @@ nav.active {
         transform: translateY(0px);
     }
   }
+nav div.right {
+    float: right;
+}
 nav button {
     display: inline-block;
     height: 2rem;
-    width: 10rem;
+    width: 8.5rem;
     background: var(--black);
     border: none;
     border-radius: 0.5rem;
@@ -72,20 +76,54 @@ nav button {
     transition: 0.25s ease-in-out;
 }
 nav button:hover {
-    background: var(--green);
+    box-shadow: inset 0 0 5px var(--green), 0 0 15px var(--lime);
+    background: var(--lightblack);
 }
 nav button img {
     height: 1.2rem;
     width: 1.2rem;
-    margin: 0.3rem;
-    float: left;
 }
 nav button span {
     color: white;
     font-size: 1.2rem;
-    margin: 0;
-    padding: 0.2rem 0 0 0;
-    float: left;
+}
+nav.sidebar {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #747474BF;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    border-top: 130px solid transparent;
+    border-bottom: 20px solid transparent;
+    padding-right: 0;
+    z-index: 5;
+    display: none;
+    animation: movetoright 1s;
+    transform: translateX(0px);
+}
+nav.sidebar.show {
+    display: inherit;
+    animation: movetoleft 1s;
+    transform: translateX(-100%);
+}
+@keyframes movetoleft {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+@keyframes movetoright {
+0% {
+    display: inherit;
+    transform: translateX(-100%);
+}
+100% {
+    transform: translateX(0);
+    display: none;
+}
 }
 nav.sidebar button {
     display: block;
@@ -100,11 +138,11 @@ nav.sidebar button {
 #menu {
     z-index: 6;
     position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    height: 3.5rem;
-    width: 3.5rem;
-    background: var(--black);
+    top: 1rem;
+    left: 1rem;
+    height: 4rem;
+    width: 4rem;
+    background: var(--lightblack);
     box-shadow: 0 0 5px black;
     border: 0;
     border-radius: 1rem;
@@ -117,8 +155,8 @@ nav.sidebar button {
     display: inline;
 }
 #menu img {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
 }
 /*      HEADER      */
 .profile {
@@ -137,6 +175,7 @@ nav.sidebar button {
 header {
     width: 100%;
     height: 100vh;
+    /*background: url(image/background.png);*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -146,7 +185,7 @@ header {
     width: 100%;
     height: 100%;
     background: transparent;
-    background: linear-gradient(transparent 0%, transparent 60%, black 95%, black 100%);
+    background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
 }
 .header-shadow.active {
     background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
@@ -158,111 +197,7 @@ header {
     }
     to {
         background: linear-gradient(transparent 0%, transparent 70%, var(--black) 100%);
-    }   
-}
-/*  NAV ANIMATION   */
-#top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5.5rem;
-    background: transparent;
-    z-index: 2;
-}
-@keyframes fadeInDown{
-    from{
-        transform: translateY(-600px);
-    }
-    to{
-        transform: translateY(0px);
-    }
-  }
-  
-@-webkit-keyframes fadeInDown{
-    from{
-        transform: translateY(-600px);
-    }
-    to{
-        transform: translateY(0px);
-    }
-  }
-#top-header.active {
-    position: fixed;
-    animation-name: fadeInDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    height: 4.4rem;
-}
-#top-header.active div.back {
-    width: 100%;
-    height: 4.4rem;
-    background: var(--darkblack);
-    box-shadow: 0 2px 20px black;
-}
-#top-header.active #logo {
-    height: 3rem;
-}
-#logo {
-    padding: 0.7rem;
-    height: 4rem;
-    float: left;
-}
-header:not(.active) nav:not(.sidebar) .nav-link {
-    background: linear-gradient(to bottom,var(--orange1) 70%, var(--orange2));
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-    transition: 1s;
-}
-header:not(.active) nav:not(.sidebar) .nav-link:hover {
-    background: linear-gradient(to bottom,#ffbb00 70%, #FF8E00);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#nav.sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #747474BF;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 100%;
-    border-top: 5.5rem solid transparent;
-    border-bottom: 20px solid transparent;
-    padding-right: 0;
-    z-index: -1;
-    display: none;
-    transform: translateY(-100%);
-}
-#nav.sidebar.noshow {
-    animation: movetoup 1s;
-}
-#nav.sidebar.show {
-    display: inherit;
-    animation: movetodown 1s;
-    transform: translateY(0);
-}
-@keyframes movetoup {
-0% {
-    transform: translateY(0%);
-    display: inherit;
-}
-100% {
-    transform: translateY(-100%);
-}
-}
-@keyframes movetodown {
-0% {
-    display: inherit;
-    transform: translateY(-100%);
-}
-100% {
-    transform: translateY(0);
-    display: none;
-}
-}
-
-.sidebar .nav-link {
-    display: block;
+    } 
 }
 /*      MATRIX      */
 #matrix {
@@ -403,10 +338,8 @@ h1 {
     color: var(--red);
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--red);
-    padding-top: 5rem;
-    margin: 0 auto 1rem auto;
 }
 h3 {
     font-size: 1.2rem;
@@ -436,13 +369,20 @@ b {
     height: fit-content;
     border-radius: 1rem;
     min-height: 15rem;
+    box-shadow: 0 10px 20px black;
     text-align: center;
 }
 .panel-section.left {
     margin: 1rem 1rem 2rem 10%;
     max-width: 45%;
-    padding-top: 4rem;
 }
+/*
+.panel-section:nth-child(odd) {
+    margin: 1rem auto 2rem 10%;
+}
+.panel-section:nth-child(even) {
+    margin: 1rem 10% 2rem auto;
+}*/
 /*      ABOUT       */
 #about p{
     text-align: justify;
@@ -491,15 +431,13 @@ b {
     background: var(--blue);
     border: none;
     border-radius: 1rem;
-    box-shadow: 0 10px 0 var(--darkblue);
+    box-shadow: 0 5px 0 var(--darkblue);
     transition: 0.5s ease-in-out;
-    transform: translateY(0);
     cursor: pointer;
 }
 .visit-btn:hover {
     background: var(--lightblue);
-    box-shadow: none !important;
-    transform: translateY(10px) !important;
+    box-shadow: 0 5px 0 var(--blue);
 }
 .visit-btn img {
     height: 1rem;
@@ -507,18 +445,13 @@ b {
 }
 /*      LARGE BTN     */
 .large {
+    /*width: 20rem;*/
     border: none;
     border-radius: 1.5rem;
     cursor: pointer;
     margin: 10px;
-    transition: 0.5s ease-in-out;
-    transform: translateY(0);
 }
-.large:hover {
-    box-shadow: none !important;
-    transform: translateY(10px) !important;
-}
-.large span {
+span {
     color: white;
     font-size: 1.5rem;
     padding: 0.7rem 10px 10px 10px;
@@ -532,6 +465,9 @@ b {
 /*      SKILLS      */
 #skills, #projects {
     text-align: center;
+}
+#skills article {
+    display: inline-flex;
 }
 div.skill-icon {
     width: fit-content;
@@ -590,7 +526,9 @@ footer p {
     bottom: 1rem;
     right: 1rem;
 }
-/*      RESOLUTION      */
+/*      MATRIX      */
+
+/*RESOLUTION*/
 @media (max-width:1400px) {
     html {font-size: 20px;}
 }
@@ -599,10 +537,11 @@ footer p {
     .panel-section {margin: 1rem 1rem 2rem 1rem !important; width: calc(100% - 2rem) !important; max-width: 100% !important;}
     .profile-div { width: 100%;}
     .laptop-div { width: 100%; text-align: center;}
-    nav button { width: 11rem;}
 }
 @media (max-width:801px) {
     html {font-size: 15px;}
+    .slide-container { width: 100%; max-width: 100%;}
+    .shadow-div { width: 100%; max-width: 100%;}
 }
 @media (max-width:600px) {
     html {font-size: 14px;}

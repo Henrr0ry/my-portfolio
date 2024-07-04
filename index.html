@@ -6,23 +6,24 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <script src="main.js"></script>
         <meta name="description" content="Henrr0ry's Programmer portfolio website">
         <meta name="keywords" content="HTML, CSS, JavaScript, Henrr0ry, Programmer, Portfolio, henry005cz, Jan Žňava">
         <meta name="author" content="Henrr0ry">
     </head>
     <body>
-        <button id="menu" onclick="nav_update()"><img src="image/menu.svg"></button>
-        <nav id="nav">
-            <img class="mini-profile" src="image/profile.png">
-            <div class="right">
-                <a href="#about"><button><img src="image/about.png"><span>About</span></button></a>
-                <a href="#projects"><button><img src="image/projects.png"><span>Projects</span></button></a>
-                <a href="#skills"><button><img src="image/skills.png"><span>Skills</span></button></a>
-                <a href="#certificate"><button><img src="image/certificate.png"><span>Achievements</span></button></a>
-                <a href="#contact"><button><img src="image/contact.png"><span>Contacts</span></button></a>
+        <div id="top-header">
+            <button id="menu" onclick="sidebar()"><img src="image/menu.svg"></button>
+            <div class="back">
+                <!--<img class="mini-profile" src="image/profile.png">-->
+                <nav id="nav">
+                    <a href="#about"><button><img src="image/about.png"><span>About</span></button></a>
+                    <a href="#projects"><button><img src="image/projects.png"><span>Projects</span></button></a>
+                    <a href="#skills"><button><img src="image/skills.png"><span>Skills</span></button></a>
+                    <a href="#certificate"><button><img src="image/certificate.png"><span>Achievements</span></button></a>
+                    <a href="#contact"><button><img src="image/contact.png"><span>Contacts</span></button></a>
+                </nav>
             </div>
-        </nav>
+        </div>
         <header>
             <div id="header-shadow" class="header-shadow"></div>
             <div id="matrix"></div>
@@ -36,7 +37,7 @@
             <section id="about" class="panel-section left">
                 <div class="in-section">
                     <div class="padding">
-                        <h2>About me</h2>
+                        <h2 style="padding-top: 1rem">About me</h2>
                         <p>
                         I am 17 years old Student Programmer.<br>I first try a create a website and then
                         started a develop easy games in C#. Then i tried a unity engine, but i crossed to
@@ -77,8 +78,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://henry005cz.itch.io" target="_blank"><button class="large" style="background: #FA5C5C;"><img src="image/itchio.png"><span>Get more on Itch.io</span></button></a>
-                <a href="https://github.com/Henrr0ry/" target="_blank"><button class="large" style="background: black;"><img src="image/github.png"><span>source code on Github</span></button></a>
+                <a href="https://henry005cz.itch.io" target="_blank"><button class="large" style="background: #FA5C5C; box-shadow: 0 10px 0 #ad3f3f;"><img src="image/itchio.png"><span>Get more on Itch.io</span></button></a>
+                <a href="https://github.com/Henrr0ry/" target="_blank"><button class="large" style="background: black; box-shadow: 0 10px 0 rgb(34, 34, 34);"><img src="image/github.png"><span>source code on Github</span></button></a>
             </section>
             <section id="skills">
                 <h2>My Skills</h2>
@@ -99,7 +100,7 @@
             </section>
             <section id="certificates">
                 <h2>My Achievements</h2>
-                <a href="https://www.freecodecamp.org/fcce2536037-2078-47dd-98b6-2b156d66bee4" target="_blank"><button class="large" style="background: black;"><img src="image/freecodecamp.png"><span>freeCodeCamp certifications</span></button></a>
+                <a href="https://www.freecodecamp.org/fcce2536037-2078-47dd-98b6-2b156d66bee4" target="_blank"><button class="large" style="background: #0A0A22; box-shadow: 0 10px 0 #13133d;"><img src="image/freecodecamp.png"><span>freeCodeCamp certifications</span></button></a>
             </section>
         </main>
         <footer>
@@ -111,6 +112,7 @@
                 <div class="contact-div"><a href="https://www.fiverr.com/henrr0ry" target="_blank"><img src="image/fiverr.png" alt="fiverr"></a></div>
             </section>
             <p>2024 © Henrr0ry</p>
+            <script src="main.js"></script>
         </footer>
     </body>
 </html>
